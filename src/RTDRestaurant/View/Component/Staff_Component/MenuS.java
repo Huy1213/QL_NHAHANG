@@ -42,10 +42,7 @@ public class MenuS extends javax.swing.JPanel {
     //Khởi tạo data cho Menu 
     public void initMenuItem() {
         addMenu(new ModelMenu(new ImageIcon(getClass().getResource("/Icons/MenuBar/table.png")), "Quản lý Bàn", "Tầng 1", "Tầng 2", "Tầng 3"));
-        addMenu(new ModelMenu(new ImageIcon(getClass().getResource("/Icons/MenuBar/customer.png")), "Thông tin Khách Hàng"));
-        addMenu(new ModelMenu(null, ""));
-        addMenu(new ModelMenu(null, "Thông tin cá nhân"));
-        addMenu(new ModelMenu(null, ""));
+        addMenu(new ModelMenu(new ImageIcon(getClass().getResource("/Icons/MenuBar/customer.png")), "Thông tin Khách Hàng"));    
         addMenu(new ModelMenu(new ImageIcon(getClass().getResource("/Icons/MenuBar/user.png")), "Tài Khoản"));
         addMenu(new ModelMenu(new ImageIcon(getClass().getResource("/Icons/MenuBar/logout.png")), "Đăng Xuất"));
     }
@@ -109,7 +106,7 @@ public class MenuS extends javax.swing.JPanel {
         logo.setForeground(new java.awt.Color(255, 255, 255));
         logo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/information-desk.png"))); // NOI18N
-        logo.setText("<html>Royal Receptionist<br> Restaurant ★★★★★</html>");
+        logo.setText("<html>SAI GON<br> Restaurant ★★★★★</html>");
         logo.setIconTextGap(15);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -133,7 +130,7 @@ public class MenuS extends javax.swing.JPanel {
     protected void paintComponent(Graphics g) {
         Graphics2D g2 = (Graphics2D) g;
         g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-        GradientPaint gp= new GradientPaint(0, 0, Color.decode("#616161"), 0, getHeight(), Color.decode("#615D6B"));
+        GradientPaint gp= new GradientPaint(0, 0, Color.decode("#1B4F93"), 0, getHeight(), Color.decode("#7388C1"));
         g2.setPaint(gp);
         g2.fillRoundRect(0, 0, getWidth(), getHeight(), 15, 15);
         g2.fillRect(0, 0, getWidth(), getHeight());

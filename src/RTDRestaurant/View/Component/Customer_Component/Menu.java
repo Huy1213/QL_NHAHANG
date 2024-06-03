@@ -41,17 +41,13 @@ public class Menu extends javax.swing.JPanel {
 
     //Khởi tạo data cho Menu 
     public void initMenuItem() {
-        addMenu(new ModelMenu(new ImageIcon(getClass().getResource("/Icons/MenuBar/astrology.png")), "Menu - Zodiac Concept", "Aries - Bạch Dương", "Taurus - Kim Ngưu", "Gemini - Song Tử", "Cancer - Cự Giải",
-            "Leo - Sư Tử", "Virgo - Xử Nữ", "Libra - Thiên Bình", "Scorpio - Bọ Cạp", "Sagittarius - Nhân Mã", "Capricorn - Ma Kết", "Aquarius - Bảo Bình", "Pisces - Song Ngư"));
-    addMenu(new ModelMenu(new ImageIcon(getClass().getResource("/Icons/MenuBar/table.png")), "Đặt bàn", "Tầng 1", "Tầng 2", "Tầng 3"));
-    addMenu(new ModelMenu(new ImageIcon(getClass().getResource("/Icons/MenuBar/information.png")), "About US"));
-    addMenu(new ModelMenu(new ImageIcon(getClass().getResource("/Icons/MenuBar/information.png")), ""));
-    addMenu(new ModelMenu(new ImageIcon(getClass().getResource("/Icons/MenuBar/information.png")), ""));
-    addMenu(new ModelMenu(new ImageIcon(getClass().getResource("/Icons/MenuBar/information.png")), ""));
-    addMenu(new ModelMenu(new ImageIcon(getClass().getResource("/Icons/MenuBar/user.png")), "Tài Khoản"));
-    addMenu(new ModelMenu(new ImageIcon(getClass().getResource("/Icons/MenuBar/star.png")), ""));
-    addMenu(new ModelMenu(new ImageIcon(getClass().getResource("/Icons/MenuBar/invoice.png")), "Lịch sử hóa đơn"));
-    addMenu(new ModelMenu(new ImageIcon(getClass().getResource("/Icons/MenuBar/logout.png")), "Đăng Xuất"));
+        addMenu(new ModelMenu(new ImageIcon(getClass().getResource("/Icons/MenuBar/astrology.png")), "Menu", "Cừu", "Bò", "Combo", "Cua",
+                "Món hàn", "Bánh ngọt", "Salad", "Lunchbox", "Ngựa", "Dê", "Đồ uống", "Cá"));
+        addMenu(new ModelMenu(new ImageIcon(getClass().getResource("/Icons/MenuBar/table.png")), "Đặt bàn", "Tầng 1", "Tầng 2", "Tầng 3"));
+        addMenu(new ModelMenu(new ImageIcon(getClass().getResource("/Icons/MenuBar/information.png")), "About US"));
+        addMenu(new ModelMenu(new ImageIcon(getClass().getResource("/Icons/MenuBar/user.png")), "Tài Khoản"));
+        addMenu(new ModelMenu(new ImageIcon(getClass().getResource("/Icons/MenuBar/invoice.png")), "Lịch sử hóa đơn"));
+        addMenu(new ModelMenu(new ImageIcon(getClass().getResource("/Icons/MenuBar/logout.png")), "Đăng Xuất"));
     }
 
     //Add Panel MenuIteam vào Panel Menu
@@ -77,12 +73,12 @@ public class Menu extends javax.swing.JPanel {
     }
 
     @SuppressWarnings("unchecked")
-   
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
 
         sp = new javax.swing.JScrollPane();
         panel = new javax.swing.JPanel();
-        
+        logo = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(204, 204, 204));
         setFocusCycleRoot(true);
@@ -108,33 +104,42 @@ public class Menu extends javax.swing.JPanel {
 
         sp.setViewportView(panel);
 
+        logo.setBackground(new java.awt.Color(255, 255, 255));
+        logo.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        logo.setForeground(new java.awt.Color(255, 255, 255));
+        logo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/restaurant (1).png"))); // NOI18N
+        logo.setText("<html> Sai Gon <br> Restaurant ★★★★★</html>");
+        logo.setIconTextGap(15);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(sp, javax.swing.GroupLayout.DEFAULT_SIZE, 264, Short.MAX_VALUE)
+            .addComponent(sp, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+            .addComponent(logo, javax.swing.GroupLayout.DEFAULT_SIZE, 264, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(98, 98, 98)
+                .addComponent(logo, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(sp, javax.swing.GroupLayout.DEFAULT_SIZE, 442, Short.MAX_VALUE)
                 .addContainerGap())
         );
-    }
+    }// </editor-fold>                        
 
     @Override
     protected void paintComponent(Graphics g) {
         Graphics2D g2 = (Graphics2D) g;
         g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-        GradientPaint gp= new GradientPaint(0, 0, Color.decode("#516395"), 0, getHeight(), Color.decode("#614385"));
+        GradientPaint gp= new GradientPaint(0, 0, Color.decode("#1B4F93"), 0, getHeight(), Color.decode("#7388C1"));
         g2.setPaint(gp);
         g2.fillRoundRect(0, 0, getWidth(), getHeight(), 15, 15);
         g2.fillRect(0, 0, getWidth(), getHeight());
         super.paintComponent(g);
     }
-
-
+    private javax.swing.JLabel logo;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel panel;
     private javax.swing.JScrollPane sp;

@@ -62,51 +62,51 @@ public class FoodMenu_Form extends javax.swing.JPanel {
             //Set Data cho Tiêu đề Menu
             switch (type) {
                 case "Arias" -> {
-                    lbTitle.setText("Menu/" + type + " - Bạch Dương");
+                    lbTitle.setText("Menu/" + type + " - Cừu");
                     lbTitle.setIcon(new ImageIcon(getClass().getResource("/Icons/MenuBar/aries.png")));
                 }
                 case "Taurus" -> {
-                    lbTitle.setText("Menu/" + type + " - Kim Ngưu");
+                    lbTitle.setText("Menu/" + type + " - Bò");
                     lbTitle.setIcon(new ImageIcon(getClass().getResource("/Icons/MenuBar/taurus.png")));
                 }
                 case "Gemini" -> {
-                    lbTitle.setText("Menu/" + type + " - Song tử");
+                    lbTitle.setText("Menu/" + type + " - Combo");
                     lbTitle.setIcon(new ImageIcon(getClass().getResource("/Icons/MenuBar/gemini.png")));
                 }
                 case "Cancer" -> {
-                    lbTitle.setText("Menu/" + type + " - Cự Giải");
+                    lbTitle.setText("Menu/" + type + " - Cua");
                     lbTitle.setIcon(new ImageIcon(getClass().getResource("/Icons/MenuBar/cancer.png")));
                 }
                 case "Leo" -> {
-                    lbTitle.setText("Menu/" + type + " - Sư tử");
+                    lbTitle.setText("Menu/" + type + " - Món hàn");
                     lbTitle.setIcon(new ImageIcon(getClass().getResource("/Icons/MenuBar/leo.png")));
                 }
                 case "Virgo" -> {
-                    lbTitle.setText("Menu/" + type + " - Xử Nữ");
+                    lbTitle.setText("Menu/" + type + " - Bánh ngọt");
                     lbTitle.setIcon(new ImageIcon(getClass().getResource("/Icons/MenuBar/virgo.png")));
                 }
                 case "Libra" -> {
-                    lbTitle.setText("Menu/" + type + " - Thiên Bình");
+                    lbTitle.setText("Menu/" + type + " - Salad");
                     lbTitle.setIcon(new ImageIcon(getClass().getResource("/Icons/MenuBar/libra.png")));
                 }
                 case "Scorpio" -> {
-                    lbTitle.setText("Menu/" + type + " - Bọ Cạp");
+                    lbTitle.setText("Menu/" + type + " - Lunchbox");
                     lbTitle.setIcon(new ImageIcon(getClass().getResource("/Icons/MenuBar/scorpio.png")));
                 }
                 case "Sagittarius" -> {
-                    lbTitle.setText("Menu/" + type + " - Nhân Mã");
+                    lbTitle.setText("Menu/" + type + " - Ngựa");
                     lbTitle.setIcon(new ImageIcon(getClass().getResource("/Icons/MenuBar/sagittarius.png")));
                 }
                 case "Capricorn" -> {
-                    lbTitle.setText("Menu/" + type + " - Ma Kết");
+                    lbTitle.setText("Menu/" + type + " - Dê");
                     lbTitle.setIcon(new ImageIcon(getClass().getResource("/Icons/MenuBar/capricorn.png")));
                 }
                 case "Aquarius" -> {
-                    lbTitle.setText("Menu/" + type + " - Bảo Bình");
+                    lbTitle.setText("Menu/" + type + " - Đồ uống");
                     lbTitle.setIcon(new ImageIcon(getClass().getResource("/Icons/MenuBar/aquarius.png")));
                 }
                 case "Pisces" -> {
-                    lbTitle.setText("Menu/" + type + " - Song Ngư");
+                    lbTitle.setText("Menu/" + type + " - Cá");
                     lbTitle.setIcon(new ImageIcon(getClass().getResource("/Icons/MenuBar/pisces.png")));
                 }
                 default -> {
@@ -194,7 +194,7 @@ public class FoodMenu_Form extends javax.swing.JPanel {
         lbTitle.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         lbTitle.setForeground(new java.awt.Color(108, 91, 123));
         lbTitle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/MenuBar/aries.png"))); // NOI18N
-        lbTitle.setText("Menu/Arias - Bạch Dương");
+        lbTitle.setText("Menu/Arias - Cừu");
         lbTitle.setIconTextGap(10);
         lbTitle.setInheritsPopupMenu(false);
 

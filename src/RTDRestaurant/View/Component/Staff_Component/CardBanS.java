@@ -92,7 +92,7 @@ public class CardBanS extends javax.swing.JPanel {
         panelRound1.setPreferredSize(new java.awt.Dimension(300, 300));
 
         img.setBackground(new java.awt.Color(233, 228, 240));
-        img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/table2.png"))); // NOI18N
+        img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/BanAn (1).png"))); // NOI18N
         img.setOpaque(true);
 
         lbValue.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N

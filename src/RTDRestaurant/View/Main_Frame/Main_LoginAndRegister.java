@@ -40,7 +40,7 @@ public class Main_LoginAndRegister extends javax.swing.JFrame {
     public Main_LoginAndRegister() {
         initComponents();
         init();
-        setTitle("Royal TheDreamers Restaurant");
+        setTitle("Sai Gon Restaurant");
         setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Icons/restaurant (1).png")));
     }
 

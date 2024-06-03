@@ -123,7 +123,7 @@
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/Icons/MenuBar/aries.png"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Menu/Arias - Ba&#x323;ch D&#x1b0;&#x1a1;ng"/>
+        <Property name="text" type="java.lang.String" value="Menu/Arias - C&#x1eeb;u"/>
         <Property name="iconTextGap" type="int" value="10"/>
         <Property name="inheritsPopupMenu" type="boolean" value="false"/>
       </Properties>

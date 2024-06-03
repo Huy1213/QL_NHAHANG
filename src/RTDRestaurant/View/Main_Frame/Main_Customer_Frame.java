@@ -11,7 +11,6 @@ import RTDRestaurant.View.Form.Customer_Form.Bill_Form;
 import RTDRestaurant.View.Form.Customer_Form.FoodMenu_Form;
 import RTDRestaurant.View.Form.MainForm;
 import RTDRestaurant.View.Form.Customer_Form.TableMenu_Form;
-import RTDRestaurant.View.Form.Customer_Form.Voucher_Form;
 import java.awt.HeadlessException;
 import java.awt.Toolkit;
 import java.sql.SQLException;
@@ -28,7 +27,7 @@ public class Main_Customer_Frame extends javax.swing.JFrame {
     public Main_Customer_Frame() throws HeadlessException {
         initComponents();
         init();
-        setTitle("Royal TheDreamers Restaurant");
+        setTitle("Sai Gon Restaurant");
         setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Icons/restaurant (1).png")));
     }
     
@@ -36,7 +35,7 @@ public class Main_Customer_Frame extends javax.swing.JFrame {
         this.user=user;
         initComponents();
         init();
-        setTitle("Royal TheDreamers Restaurant");
+        setTitle("Sai Gon Restaurant");
         setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Icons/restaurant (1).png")));
     }
     
@@ -77,14 +76,11 @@ public class Main_Customer_Frame extends javax.swing.JFrame {
                         }
                     }
                     case 2 -> main.showForm(new AboutUs_Form());
-                    case 6 -> main.showForm(new AccountC_Form(user));
-                    case 7 -> {
-                        main.showForm(new Voucher_Form(user));
-                    }
-                    case 8 -> {
+                    case 3 -> main.showForm(new AccountC_Form(user));              
+                    case 4 -> {
                         main.showForm(new Bill_Form(user));
                     }
-                    case 9 -> {
+                    case 5 -> {
                         dispose();
                         Main_LoginAndRegister.main();
                     }

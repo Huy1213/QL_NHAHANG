@@ -70,7 +70,7 @@
               <Color blue="f0" green="e4" red="e9" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Icons/table2.png"/>
+              <Image iconType="3" name="/Icons/BanAn (1).png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>

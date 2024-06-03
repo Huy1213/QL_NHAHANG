@@ -25,7 +25,7 @@ public class Main_WarehouseStaff_Frame extends javax.swing.JFrame {
     public Main_WarehouseStaff_Frame() throws HeadlessException {
         initComponents();
         init();
-        setTitle("Royal TheDreamers Restaurant");
+        setTitle("Sai Gon Restaurant");
         setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Icons/restaurant (1).png")));
     }
 
@@ -33,7 +33,7 @@ public class Main_WarehouseStaff_Frame extends javax.swing.JFrame {
         this.user = user;
         initComponents();
         init();
-        setTitle("Royal TheDreamers Restaurant");
+        setTitle("Sai Gon Restaurant");
         setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Icons/warehouse.png")));
     }
 
@@ -59,10 +59,10 @@ public class Main_WarehouseStaff_Frame extends javax.swing.JFrame {
                     case 3 -> {
                         main.showForm(new Export_Form(user,main));
                     }
-                    case 7 -> {
+                    case 4 -> {
                         main.showForm(new AccountS_Form(user));
                     }
-                    case 8 -> {
+                    case 5 -> {
                         dispose();
                         Main_LoginAndRegister.main();
                     }

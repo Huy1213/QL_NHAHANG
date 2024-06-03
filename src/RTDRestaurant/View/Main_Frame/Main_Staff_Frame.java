@@ -23,7 +23,7 @@ public class Main_Staff_Frame extends javax.swing.JFrame {
     public Main_Staff_Frame() throws HeadlessException {
         initComponents();
         init();
-        setTitle("Royal TheDreamers Restaurant");
+        setTitle("Sai Gon Restaurant");
         setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Icons/restaurant (1).png")));
     }
 
@@ -31,7 +31,7 @@ public class Main_Staff_Frame extends javax.swing.JFrame {
         this.user = user;
         initComponents();
         init();
-        setTitle("Royal TheDreamers Restaurant");
+        setTitle("Sai Gon Restaurant");
         setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Icons/information-desk.png")));
     }
 
@@ -57,10 +57,10 @@ public class Main_Staff_Frame extends javax.swing.JFrame {
                     case 1 -> {
                         main.showForm(new CusInformation_Form(main));
                     }
-                    case 5 -> {
+                    case 2 -> {
                         main.showForm(new AccountS_Form(user));
                     }
-                    case 6 -> {
+                    case 3 -> {
                         dispose();
                         Main_LoginAndRegister.main();
                     }
