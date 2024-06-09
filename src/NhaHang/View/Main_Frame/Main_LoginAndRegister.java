@@ -154,18 +154,23 @@ public class Main_LoginAndRegister extends javax.swing.JFrame {
         });
     }
     private void register(){
-        ModelNguoiDung user=loginAndRegister.getUser();
+        ModelNguoiDung user = loginAndRegister.getUser();
+        String name = loginAndRegister.getName();
+        if (user == null || user.getEmail() == null || user.getPassword() == null || name == null || user.getEmail().isEmpty() || user.getPassword().isEmpty() || name.isEmpty()) {
+            showMessage(Message.MessageType.ERROR, "Vui lòng nhập đầy đủ thông tin.");
+            return; // Dừng lại nếu có trường rỗng hoặc null
+        }
+
         try {
             if(service.checkDuplicateEmail(user.getEmail())){
-                showMessage(Message.MessageType.ERROR,"Email đã tồn tại");
-            }else{
+                showMessage(Message.MessageType.ERROR,"Email đã tồn tại");
+            } else {
                 service.insertUser(user);
                 sendMail(user);
             }
         } catch (SQLException e) {
             e.printStackTrace();
-            showMessage(Message.MessageType.ERROR, "Lỗi đăng ký");
-            
+            showMessage(Message.MessageType.ERROR, "Lỗi đăng ký");
         }
     }
     private void login(){

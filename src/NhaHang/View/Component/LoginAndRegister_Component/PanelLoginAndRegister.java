@@ -16,6 +16,7 @@ import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import net.miginfocom.swing.MigLayout;
 
 //Panel Đăng nhập/Đăng kys
@@ -107,10 +108,23 @@ public class PanelLoginAndRegister extends javax.swing.JLayeredPane {
             public void actionPerformed(ActionEvent e) {
                 name = txtUser.getText().trim();
                 String email = txtEmail.getText().trim();
-                String password = String.valueOf(txtPassword.getPassword());
+                String password = String.valueOf(txtPassword.getPassword());               
                 user = new ModelNguoiDung(0, email, password, "Khach Hang");
             }
         });
+        
+        // Thêm nhãn "Đăng nhập" dưới cùng của panel đăng ký
+        JLabel lblLogin = new JLabel("Đã có tài khoản? Đăng nhập");
+        lblLogin.setForeground(new Color(100, 100, 100));
+        lblLogin.setFont(new Font("sansserif", 1, 12));
+        lblLogin.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        lblLogin.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                showRegister(false);  // Chuyển sang màn hình đăng nhập
+            }
+        });
+        register.add(lblLogin);
     }
 
     //Khởi tạo màn hình Đăng nhập
@@ -171,6 +185,18 @@ public class PanelLoginAndRegister extends javax.swing.JLayeredPane {
                 dataLogin = new ModelLogin(email, password);
             }
         });
+        // Thêm nhãn "Đăng ký" dưới cùng của panel đăng nhập
+    JLabel lblRegister = new JLabel("Chưa có tài khoản? Đăng ký");
+    lblRegister.setForeground(new Color(100, 100, 100));
+    lblRegister.setFont(new Font("sansserif", 1, 12));
+    lblRegister.setCursor(new Cursor(Cursor.HAND_CURSOR));
+    lblRegister.addMouseListener(new MouseAdapter() {
+        @Override
+        public void mouseClicked(MouseEvent e) {
+            showRegister(true);  // Chuyển sang màn hình đăng ký
+        }
+    });
+    login.add(lblRegister);
     }
 
     @SuppressWarnings("unchecked")

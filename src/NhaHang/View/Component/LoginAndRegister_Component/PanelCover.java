@@ -55,26 +55,8 @@ public class PanelCover extends javax.swing.JPanel {
         subtitle.setForeground(new Color(245,245,245));
         add(subtitle);
         
-        description = new JLabel("Để sử dụng dịch vụ tại đây vui lòng");
-        description.setForeground(new Color(245,245,245));
-        add(description);
-        
-        description1 = new JLabel("đăng nhập với tài khoản cá nhân của bạn");
-        description1.setForeground(new Color(245,245,245));
-        add(description1);
-        
-        button = new ButtonOutLine();
-        button.setBackground(new Color(255,255,255));
-        button.setForeground(new Color(255,255,255));
-        button.setText("<<  Đăng nhập");
-        //Add Event cho Button "Đăng nhập"
-        button.addActionListener(new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                event.actionPerformed(e);
-            }
-        });
-        add(button,"w 60%, h 40");
+       
+       
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -151,14 +133,14 @@ public class PanelCover extends javax.swing.JPanel {
                 title.setText("Bạn chưa có tài khoản tại");
                 description.setText("Đừng lo, tạo mới một tài khoản");
                 description1.setText("và bắt đầu trải nghiệm của bạn với nhà hàng chúng tôi");
-                button.setText("Đăng ký  >>");
+               
             }else{
                 //Set Data cho Panel cover khi ở màn hình đăng ký
                 logo.setIcon(new ImageIcon(getClass().getResource("/Icons/logo_nhahang.png")));
                 title.setText("Chào mừng bạn đến với nhà hàng");
                 description.setText("Để sử dụng dịch vụ tại đây vui lòng");
                 description1.setText("đăng nhập với tài khoản cá nhân của bạn");
-                button.setText("<<  Đăng nhập");
+            
             }
             this.isLogin=login;
         }

@@ -120,17 +120,18 @@ public class CusInformation_Form extends javax.swing.JPanel {
 
             },
             new String [] {
-                "Mã KH", "Tên khách hàng", "Ngày tham gia", "Doanh số", "Điểm tích lũy"
+                "Mã KH", "Tên khách hàng", "Ngày tham gia", "Doanh số"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
+                false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit [columnIndex];
             }
         });
+        tableKH.setFocusable(false);
         jScrollPane1.setViewportView(tableKH);
         if (tableKH.getColumnModel().getColumnCount() > 0) {
             tableKH.getColumnModel().getColumn(0).setMinWidth(120);

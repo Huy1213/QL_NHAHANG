@@ -92,7 +92,7 @@ public class ServiceUser {
     //Kiểm tra Mã trùng 
     private boolean checkDuplicateCode(String code) throws SQLException{
         boolean duplicate=false;
-        String sql="SELECT * FROM NguoiDung WHERE VerifyCode=? FETCH FIRST 1 ROWS ONLY";
+        String sql = "SELECT TOP 1 * FROM NguoiDung WHERE VerifyCode = ?";
         PreparedStatement p = con.prepareStatement(sql);
         p.setString(1, code);
         ResultSet r=p.executeQuery();
@@ -111,7 +111,7 @@ public class ServiceUser {
     */
     public boolean checkDuplicateEmail(String email) throws SQLException{
         boolean duplicate=false;
-        String sql="SELECT * FROM NguoiDung WHERE Email=? AND Trangthai='Verified' FETCH FIRST 1 ROWS ONLY";
+        String sql = "SELECT TOP 1 * FROM NguoiDung WHERE Email = ? AND Trangthai = 'Verified'";
         PreparedStatement p = con.prepareStatement(sql);
         p.setString(1, email);
         ResultSet r=p.executeQuery();
@@ -149,7 +149,7 @@ public class ServiceUser {
         
         //Thêm KH mới
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-MM-YYYY");
-        String sql_KH="INSERT INTO KhachHang (ID_KH,TenKH, Ngaythamgia,ID_ND) VALUES (?,?,to_date(?, 'dd-mm-yyyy'),?)";
+        String sql_KH="INSERT INTO KhachHang (ID_KH, TenKH, Ngaythamgia, ID_ND) VALUES (?,?,CONVERT(DATE, ?, 105),?)";
         PreparedStatement p2=con.prepareStatement(sql_KH);
         p2.setInt(1, id);
         p2.setString(2, name);

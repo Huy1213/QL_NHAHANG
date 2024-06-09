@@ -19,18 +19,18 @@ public class ServiceMail {
     */
     public ModelMessage sendMain(String toEmail, String code) {
         ModelMessage ms = new ModelMessage(false, "");
+        
         //Email người gửi
-        String from = "thedreamersrestaurant@gmail.com";
+        String from = "SaiGonRestaurant@gmail.com";
         Properties prop = new Properties();
         prop.put("mail.smtp.host", "smtp.gmail.com");
         prop.put("mail.smtp.port", "587");
         prop.put("mail.smtp.auth", "true");
         prop.put("mail.smtp.starttls.enable", "true");
 
-        String username = "thedreamersrestaurant@gmail.com";//Email nhà hàng
-        //Mật khẩu :thedreamers123456
-        //App password :zklylvvnbkptvrhc
-        String password = "zklylvvnbkptvrhc";    //  Mật khẩu email nhà hàng
+        String username = "thanhhuy9b@gmail.com";//Email nhà hàng
+      
+        String password = "dvbewjnaqicnaajy";    //  Mật khẩu email nhà hàng
         Session session = Session.getInstance(prop, new javax.mail.Authenticator() {
             @Override
             protected PasswordAuthentication getPasswordAuthentication() {
@@ -44,7 +44,7 @@ public class ServiceMail {
             message.addRecipient(Message.RecipientType.TO, new InternetAddress(toEmail));
             message.setSubject("Verify Code");
             message.setText(code + " là mã xác minh tài khoản"
-                            + " Royal TheDreamers Restaurant của bạn.");
+                            + " Sai Gon Restaurant của bạn.");
             Transport.send(message);
             ms.setSuccess(true);
         } catch (MessagingException e) {
