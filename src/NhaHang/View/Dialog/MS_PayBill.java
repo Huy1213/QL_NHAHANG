@@ -103,8 +103,8 @@ public class MS_PayBill extends javax.swing.JDialog {
         panelRound1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(134, 168, 231), 2));
         panelRound1.setOpaque(true);
 
-        lbTitle.setFont(new java.awt.Font("Sylfaen", 1, 26)); // NOI18N
-        lbTitle.setForeground(new java.awt.Color(108, 91, 123));
+        lbTitle.setFont(new java.awt.Font("Galvji", 1, 26)); // NOI18N
+        lbTitle.setForeground(new java.awt.Color(255, 102, 0));
         lbTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbTitle.setText("NHÀ HÀNG SÀI GÒN");
 
@@ -128,7 +128,7 @@ public class MS_PayBill extends javax.swing.JDialog {
                 return canEdit [columnIndex];
             }
         });
-        cthd.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        cthd.setFont(new java.awt.Font("Galvji", 0, 13)); // NOI18N
         jScrollPane1.setViewportView(cthd);
         if (cthd.getColumnModel().getColumnCount() > 0) {
             cthd.getColumnModel().getColumn(0).setPreferredWidth(150);
@@ -139,7 +139,6 @@ public class MS_PayBill extends javax.swing.JDialog {
         jSeparator2.setBackground(new java.awt.Color(76, 76, 76));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(108, 91, 123));
         jLabel3.setText("Tổng Tiền");
 
         txtTotal.setEditable(false);
@@ -151,12 +150,10 @@ public class MS_PayBill extends javax.swing.JDialog {
             }
         });
 
-        lbThank.setFont(new java.awt.Font("Sylfaen", 1, 18)); // NOI18N
-        lbThank.setForeground(new java.awt.Color(108, 91, 123));
-        lbThank.setText("CAM ON QUY KHACH DA CHON MON");
+        lbThank.setFont(new java.awt.Font("Galvji", 1, 18)); // NOI18N
+        lbThank.setText("HẸN GẶP LẠI QUÝ KHÁCH");
 
         lbDate.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        lbDate.setForeground(new java.awt.Color(108, 91, 123));
         lbDate.setText("Ngày");
 
         cmdExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/close (4).png"))); // NOI18N
@@ -171,34 +168,33 @@ public class MS_PayBill extends javax.swing.JDialog {
         panelRound1Layout.setHorizontalGroup(
             panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelRound1Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelRound1Layout.createSequentialGroup()
-                        .addGroup(panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panelRound1Layout.createSequentialGroup()
-                                .addGap(83, 83, 83)
-                                .addComponent(lbThank))
-                            .addGroup(panelRound1Layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(lbDate)))
+                        .addComponent(lbDate)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(panelRound1Layout.createSequentialGroup()
-                        .addContainerGap()
+                    .addComponent(jSeparator1)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 467, Short.MAX_VALUE)
+                    .addComponent(jSeparator2)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRound1Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jSeparator1)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 484, Short.MAX_VALUE)
-                            .addComponent(jSeparator2)
-                            .addGroup(panelRound1Layout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(txtTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRound1Layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(cmdExit)))))
+                            .addComponent(cmdExit, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(txtTotal, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRound1Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(lbTitle)
-                .addGap(119, 119, 119))
+                .addGroup(panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRound1Layout.createSequentialGroup()
+                        .addComponent(lbTitle)
+                        .addGap(119, 119, 119))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRound1Layout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addContainerGap())))
+            .addGroup(panelRound1Layout.createSequentialGroup()
+                .addGap(118, 118, 118)
+                .addComponent(lbThank)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelRound1Layout.setVerticalGroup(
             panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -215,10 +211,10 @@ public class MS_PayBill extends javax.swing.JDialog {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(34, 34, 34)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(90, 90, 90)
-                .addGroup(panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtTotal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(40, 40, 40)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txtTotal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addComponent(lbThank)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -228,10 +224,10 @@ public class MS_PayBill extends javax.swing.JDialog {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(panelRound1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

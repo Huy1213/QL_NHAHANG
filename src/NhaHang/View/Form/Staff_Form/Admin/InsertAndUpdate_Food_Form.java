@@ -99,13 +99,13 @@ public class InsertAndUpdate_Food_Form extends javax.swing.JPanel {
         bg = new NhaHang.View.Swing.PanelRound();
         pic = new NhaHang.View.Swing.ImageAvatar();
         lbmaMA = new javax.swing.JLabel();
+        txtmaMA = new NhaHang.View.Swing.MyTextField();
         lbTitle = new javax.swing.JLabel();
         lbtenMA = new javax.swing.JLabel();
         txttenMA = new NhaHang.View.Swing.MyTextField();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
         lbloai = new javax.swing.JLabel();
-        txtmaMA = new NhaHang.View.Swing.MyTextField();
         cbboxLoai = new javax.swing.JComboBox<>();
         cmdOK = new NhaHang.View.Swing.ButtonOutLine();
         cmdCancel = new NhaHang.View.Swing.ButtonOutLine();
@@ -118,22 +118,29 @@ public class InsertAndUpdate_Food_Form extends javax.swing.JPanel {
         bg.setBackground(new java.awt.Color(255, 255, 255));
 
         lbmaMA.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        lbmaMA.setForeground(new java.awt.Color(89, 89, 89));
         lbmaMA.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lbmaMA.setText("Mã Món Ăn");
+        pic.add(lbmaMA);
+        lbmaMA.setBounds(0, 30, 110, 38);
+
+        txtmaMA.setEditable(false);
+        txtmaMA.setBackground(new java.awt.Color(204, 204, 204));
+        txtmaMA.setForeground(new java.awt.Color(93, 98, 101));
+        txtmaMA.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtmaMA.setFont(new java.awt.Font("sansserif", 0, 16)); // NOI18N
+        pic.add(txtmaMA);
+        txtmaMA.setBounds(130, 30, 250, 40);
 
         lbTitle.setBackground(new java.awt.Color(255, 255, 255));
         lbTitle.setFont(new java.awt.Font("Segoe UI", 0, 22)); // NOI18N
-        lbTitle.setForeground(new java.awt.Color(108, 91, 123));
-        lbTitle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/online-order.png"))); // NOI18N
-        lbTitle.setText("Thêm MÓN ĂN");
+        lbTitle.setText("THÊM MÓN ĂN");
         lbTitle.setIconTextGap(10);
 
         lbtenMA.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        lbtenMA.setForeground(new java.awt.Color(89, 89, 89));
         lbtenMA.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lbtenMA.setText("Tên Món Ăn");
 
+        txttenMA.setBackground(new java.awt.Color(204, 204, 204));
         txttenMA.setForeground(new java.awt.Color(93, 98, 101));
         txttenMA.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txttenMA.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
@@ -143,17 +150,10 @@ public class InsertAndUpdate_Food_Form extends javax.swing.JPanel {
         jSeparator2.setBackground(new java.awt.Color(76, 76, 76));
 
         lbloai.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        lbloai.setForeground(new java.awt.Color(89, 89, 89));
         lbloai.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lbloai.setText("Loại Món");
 
-        txtmaMA.setEditable(false);
-        txtmaMA.setBackground(new java.awt.Color(175, 185, 203));
-        txtmaMA.setForeground(new java.awt.Color(93, 98, 101));
-        txtmaMA.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txtmaMA.setFont(new java.awt.Font("sansserif", 0, 16)); // NOI18N
-
-        cbboxLoai.setBackground(new java.awt.Color(215, 221, 232));
+        cbboxLoai.setBackground(new java.awt.Color(204, 204, 204));
         cbboxLoai.setFont(new java.awt.Font("SansSerif", 0, 16)); // NOI18N
         cbboxLoai.setForeground(new java.awt.Color(83, 105, 118));
         cbboxLoai.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cuu", "Bo", "Combo", "Cua", "MonHan", "BanhNgot", "Salad", "Scorpio", "Ngua", "De", "DoUong", "Ca" }));
@@ -183,10 +183,10 @@ public class InsertAndUpdate_Food_Form extends javax.swing.JPanel {
         });
 
         lbDonGia.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        lbDonGia.setForeground(new java.awt.Color(89, 89, 89));
         lbDonGia.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lbDonGia.setText("Đơn Giá");
 
+        txtgia.setBackground(new java.awt.Color(204, 204, 204));
         txtgia.setForeground(new java.awt.Color(93, 98, 101));
         txtgia.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtgia.setFont(new java.awt.Font("sansserif", 0, 16)); // NOI18N
@@ -198,7 +198,6 @@ public class InsertAndUpdate_Food_Form extends javax.swing.JPanel {
 
         cmdStop.setBackground(new java.awt.Color(108, 91, 123));
         cmdStop.setForeground(new java.awt.Color(255, 255, 255));
-        cmdStop.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/no-food.png"))); // NOI18N
         cmdStop.setText("NGƯNG KINH DOANH");
         cmdStop.setFocusable(false);
         cmdStop.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
@@ -219,18 +218,19 @@ public class InsertAndUpdate_Food_Form extends javax.swing.JPanel {
                     .addComponent(jSeparator1)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bgLayout.createSequentialGroup()
                         .addComponent(pic, javax.swing.GroupLayout.PREFERRED_SIZE, 335, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(40, 40, 40)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lbDonGia, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(bgLayout.createSequentialGroup()
+                                .addGap(0, 23, Short.MAX_VALUE)
+                                .addComponent(lbtenMA, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(lbloai, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(45, 45, 45)
                         .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lbtenMA, javax.swing.GroupLayout.DEFAULT_SIZE, 137, Short.MAX_VALUE)
-                            .addComponent(lbmaMA, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lbDonGia, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lbloai, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(30, 30, 30)
-                        .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtgia, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(txtmaMA, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(txttenMA, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(cbboxLoai, 0, 250, Short.MAX_VALUE))))
+                            .addComponent(txttenMA, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtgia, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cbboxLoai, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(23, 23, 23)))
                 .addGap(60, 60, 60))
             .addGroup(bgLayout.createSequentialGroup()
                 .addGap(231, 231, 231)
@@ -250,19 +250,15 @@ public class InsertAndUpdate_Food_Form extends javax.swing.JPanel {
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(bgLayout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lbmaMA, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtmaMA, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(40, 40, 40)
+                        .addGap(49, 49, 49)
                         .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lbtenMA, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txttenMA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(40, 40, 40)
+                        .addGap(18, 18, 18)
                         .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lbDonGia, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtgia, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(40, 40, 40)
+                        .addGap(18, 18, 18)
                         .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(cbboxLoai, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lbloai, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))

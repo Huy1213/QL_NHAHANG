@@ -24,9 +24,9 @@ public class DatabaseConnection {
     }
     //Thực hiện kết nối tới Database
     public void connectToDatabase() throws SQLException {
-        final String url = "jdbc:sqlserver://THANHHUY:1433;databaseName=QL_NHAHANG;encrypt=true;trustServerCertificate=true";
+        final String url = "jdbc:sqlserver://localhost:1433;databaseName=QL_NHAHANG;encrypt=true;trustServerCertificate=true";
         final String username = "sa";
-        final String password = "123";
+        final String password = "123456aA@$";
         connection = DriverManager.getConnection(url, username, password);
     }
  

@@ -49,19 +49,10 @@ public class TableMenuS_Form extends javax.swing.JPanel {
             
             switch (floor) {
                 case "Tang 1" -> {
-                    lbTitle.setText("Quản lý Bàn/Tầng 1");
+                    lbTitle.setText("Quản lý Bàn/Sảnh");
                     lbTitle.setIcon(new ImageIcon(getClass().getResource("/Icons/one.png")));
                 }
-                case "Tang 2" -> {
-                    lbTitle.setText("Quản lý Bàn/Tầng 2");
-                    lbTitle.setIcon(new ImageIcon(getClass().getResource("/Icons/two.png")));
-                }
-                case "Tang 3" -> {
-                    lbTitle.setText("Quản lý Bàn/Tầng 3");
-                    lbTitle.setIcon(new ImageIcon(getClass().getResource("/Icons/three.png")));
-                }
-                default -> {
-                }
+                
             }
         } catch (SQLException ex) {
             Logger.getLogger(TableMenuS_Form.class.getName()).log(Level.SEVERE, null, ex);

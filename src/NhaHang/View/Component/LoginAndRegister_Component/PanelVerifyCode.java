@@ -47,7 +47,7 @@ public class PanelVerifyCode extends javax.swing.JPanel {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(108, 91, 123));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Verify Code");
+        jLabel1.setText("OTP");
 
         jLabel2.setForeground(new java.awt.Color(108, 91, 123));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);

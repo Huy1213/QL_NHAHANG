@@ -97,7 +97,7 @@
               <Color blue="7b" green="5b" red="6c" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="Verify Code"/>
+            <Property name="text" type="java.lang.String" value="OTP"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel2">

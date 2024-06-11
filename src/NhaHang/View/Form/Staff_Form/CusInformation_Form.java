@@ -34,13 +34,13 @@ public class CusInformation_Form extends javax.swing.JPanel {
         df = new DecimalFormat("##,###,###");
         //Thêm data cho Menu
         initTable();
-        getSLKH();
+        //getSLKH();
         setCurrentDate();
     }
 
-    public void getSLKH() {
+    /*public void getSLKH() {
         txtTong.setText(list.size() + " Members");
-    }
+    }*/
 
     public void setCurrentDate() {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-MM-YYYY");
@@ -73,10 +73,7 @@ public class CusInformation_Form extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lbTitle = new javax.swing.JLabel();
         txtSearch = new NhaHang.View.Swing.MyTextField();
-        lbTong = new javax.swing.JLabel();
-        txtTong = new NhaHang.View.Swing.MyTextField();
         lbCus = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -85,12 +82,6 @@ public class CusInformation_Form extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(247, 247, 247));
 
-        lbTitle.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
-        lbTitle.setForeground(new java.awt.Color(108, 91, 123));
-        lbTitle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/customer (1).png"))); // NOI18N
-        lbTitle.setText("Thông tin Khách Hàng");
-        lbTitle.setIconTextGap(10);
-
         txtSearch.setPrefixIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/loupe (1).png"))); // NOI18N
         txtSearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -98,16 +89,7 @@ public class CusInformation_Form extends javax.swing.JPanel {
             }
         });
 
-        lbTong.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        lbTong.setForeground(new java.awt.Color(89, 89, 89));
-        lbTong.setText("Khách hàng thành viên");
-
-        txtTong.setEditable(false);
-        txtTong.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txtTong.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-
         lbCus.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        lbCus.setForeground(new java.awt.Color(89, 89, 89));
         lbCus.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lbCus.setText("Danh sách Khách Hàng");
 
@@ -143,7 +125,6 @@ public class CusInformation_Form extends javax.swing.JPanel {
         }
 
         lbDate.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        lbDate.setForeground(new java.awt.Color(108, 91, 123));
         lbDate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/calendar.png"))); // NOI18N
         lbDate.setText("Ngày hiện tại");
         lbDate.setIconTextGap(20);
@@ -156,20 +137,14 @@ public class CusInformation_Form extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 838, Short.MAX_VALUE)
-                    .addComponent(jSeparator2)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(lbTong)
-                                .addGap(50, 50, 50)
-                                .addComponent(txtTong, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(lbCus)
-                            .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jSeparator2))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(lbTitle)
+                        .addComponent(lbCus)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(lbDate, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(lbDate, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -177,20 +152,14 @@ public class CusInformation_Form extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbDate))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbTong, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtTong, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 1, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
-                .addComponent(lbCus)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbDate)
+                    .addComponent(lbCus))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 498, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 1, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 613, Short.MAX_VALUE)
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -205,10 +174,7 @@ public class CusInformation_Form extends javax.swing.JPanel {
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JLabel lbCus;
     private javax.swing.JLabel lbDate;
-    private javax.swing.JLabel lbTitle;
-    private javax.swing.JLabel lbTong;
     private NhaHang.View.Swing.Table tableKH;
     private NhaHang.View.Swing.MyTextField txtSearch;
-    private NhaHang.View.Swing.MyTextField txtTong;
     // End of variables declaration//GEN-END:variables
 }

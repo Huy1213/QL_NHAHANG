@@ -10,9 +10,6 @@ import NhaHang.View.Form.Staff_Form.Staff.OrderFood_Form;
 import NhaHang.View.Main_Frame.Main_Staff_Frame;
 import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.RenderingHints;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -37,12 +34,11 @@ public class CardBanS extends javax.swing.JPanel {
     public void init(){
         book = new MS_ConfirmReserve(Main_Staff_Frame.getFrames()[0], true);
         cancel = new MS_CancelReserve(Main_Staff_Frame.getFrames()[0], true);
-        setPreferredSize(new Dimension(300, 325));
+        setPreferredSize(new Dimension(300, 160));
         lbTitle.setText("Mã bàn: "+table.getID()+" - "+table.getName());
         lbValue.setText(table.getStatus());
         switch (table.getStatus()) {
             case "Con trong" -> {
-                img.setBackground(Color.decode("#E9E4F0"));
                 cmdAdj.setBackground(Color.decode("#355C7D"));
                 cmdAdj.setText("ĐẶT TRƯỚC");
                 //Nếu bàn trống thì thêm event xử lý đặt bàn
@@ -54,7 +50,6 @@ public class CardBanS extends javax.swing.JPanel {
                 });
             }
             case "Dang dung bua" -> {
-                img.setBackground(Color.decode("#605C3C"));
                 cmdAdj.setText("GỌI MÓN");
                 cmdAdj.addActionListener(new ActionListener() {
                     @Override
@@ -64,7 +59,6 @@ public class CardBanS extends javax.swing.JPanel {
                 });
             }
             case "Da dat truoc" -> {
-                img.setBackground(Color.decode("#FFE000"));
                 cmdAdj.setText("HỦY ĐẶT TRƯỚC");
                 cmdAdj.setBackground(Color.decode("#c94b4b"));
                 cmdAdj.addActionListener(new ActionListener() {
@@ -84,16 +78,11 @@ public class CardBanS extends javax.swing.JPanel {
     private void initComponents() {
 
         panelRound1 = new NhaHang.View.Swing.PanelRound();
-        img = new javax.swing.JLabel();
         lbValue = new javax.swing.JLabel();
         cmdAdj = new NhaHang.View.Swing.Button();
         lbTitle = new javax.swing.JLabel();
 
         panelRound1.setPreferredSize(new java.awt.Dimension(300, 300));
-
-        img.setBackground(new java.awt.Color(233, 228, 240));
-        img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/BanAn (1).png"))); // NOI18N
-        img.setOpaque(true);
 
         lbValue.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lbValue.setForeground(new java.awt.Color(108, 91, 123));
@@ -102,7 +91,6 @@ public class CardBanS extends javax.swing.JPanel {
 
         cmdAdj.setBackground(new java.awt.Color(108, 91, 123));
         cmdAdj.setForeground(new java.awt.Color(255, 255, 255));
-        cmdAdj.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/levels.png"))); // NOI18N
         cmdAdj.setText("TÙY CHỈNH");
         cmdAdj.setToolTipText("");
         cmdAdj.setFocusable(false);
@@ -119,26 +107,24 @@ public class CardBanS extends javax.swing.JPanel {
         panelRound1.setLayout(panelRound1Layout);
         panelRound1Layout.setHorizontalGroup(
             panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(img, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(panelRound1Layout.createSequentialGroup()
                 .addGap(30, 30, 30)
                 .addGroup(panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(cmdAdj, javax.swing.GroupLayout.DEFAULT_SIZE, 241, Short.MAX_VALUE)
                     .addComponent(lbTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(lbValue, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
         panelRound1Layout.setVerticalGroup(
             panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelRound1Layout.createSequentialGroup()
-                .addComponent(img, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(29, 29, 29)
                 .addComponent(lbTitle)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(lbValue)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(cmdAdj, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -149,23 +135,17 @@ public class CardBanS extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelRound1, javax.swing.GroupLayout.DEFAULT_SIZE, 325, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(panelRound1, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    @Override
-    protected void paintComponent(Graphics g) {
-        Graphics2D g2 = (Graphics2D) g;
-        g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-        g2.setColor(getBackground());
-        g2.fillRoundRect(0, 0, getWidth(), getHeight(), 20, 20);
-        super.paintComponent(g);
-    }
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private NhaHang.View.Swing.Button cmdAdj;
-    private javax.swing.JLabel img;
     private javax.swing.JLabel lbTitle;
     private javax.swing.JLabel lbValue;
     private NhaHang.View.Swing.PanelRound panelRound1;

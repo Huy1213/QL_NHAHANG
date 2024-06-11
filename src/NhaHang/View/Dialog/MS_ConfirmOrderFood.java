@@ -83,7 +83,6 @@ public class MS_ConfirmOrderFood extends javax.swing.JDialog {
         cmdOK = new NhaHang.View.Swing.ButtonOutLine();
         cmdCancel = new NhaHang.View.Swing.ButtonOutLine();
         lbMessage = new javax.swing.JLabel();
-        lbIcon = new javax.swing.JLabel();
         lbTotal = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -126,8 +125,6 @@ public class MS_ConfirmOrderFood extends javax.swing.JDialog {
         lbMessage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbMessage.setText("Message");
 
-        lbIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/ask (1).png"))); // NOI18N
-
         lbTotal.setFont(new java.awt.Font("Segoe UI", 1, 22)); // NOI18N
         lbTotal.setForeground(new java.awt.Color(108, 91, 123));
         lbTotal.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -138,47 +135,38 @@ public class MS_ConfirmOrderFood extends javax.swing.JDialog {
         panelRound1Layout.setHorizontalGroup(
             panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelRound1Layout.createSequentialGroup()
-                .addGroup(panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelRound1Layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(lbTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRound1Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(cmdOK, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(101, 101, 101)
-                        .addComponent(cmdCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(108, 108, 108)))
+                .addGap(30, 30, 30)
+                .addComponent(lbTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(30, 30, 30))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRound1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lbMessage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(panelRound1Layout.createSequentialGroup()
-                .addGroup(panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelRound1Layout.createSequentialGroup()
-                        .addGap(264, 264, 264)
-                        .addComponent(lbIcon))
-                    .addGroup(panelRound1Layout.createSequentialGroup()
-                        .addGap(115, 115, 115)
-                        .addComponent(lbTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(115, 115, 115)
+                .addComponent(lbTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(116, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRound1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(cmdCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(98, 98, 98)
+                .addComponent(cmdOK, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(150, 150, 150))
         );
         panelRound1Layout.setVerticalGroup(
             panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelRound1Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(lbIcon)
-                .addGap(20, 20, 20)
+                .addGap(65, 65, 65)
                 .addComponent(lbTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20)
                 .addComponent(lbMessage)
                 .addGap(18, 18, 18)
                 .addComponent(lbTotal)
-                .addGap(30, 30, 30)
+                .addGap(18, 18, 18)
                 .addGroup(panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cmdOK, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
                     .addComponent(cmdCancel, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE))
-                .addGap(30, 30, 30))
+                .addGap(52, 52, 52))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -227,7 +215,6 @@ public class MS_ConfirmOrderFood extends javax.swing.JDialog {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private NhaHang.View.Swing.ButtonOutLine cmdCancel;
     private NhaHang.View.Swing.ButtonOutLine cmdOK;
-    private javax.swing.JLabel lbIcon;
     private javax.swing.JLabel lbMessage;
     private javax.swing.JLabel lbTitle;
     private javax.swing.JLabel lbTotal;

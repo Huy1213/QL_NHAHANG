@@ -183,9 +183,7 @@ public class Main_LoginAndRegister extends javax.swing.JFrame {
                     case "Khach Hang" -> {
                         Main_Customer_Frame.main(user);
                     }
-                    case "Nhan Vien Kho" -> {
-                        Main_WarehouseStaff_Frame.main(user);
-                    }
+                   
                     case "Nhan Vien" -> {
                         Main_Staff_Frame.main(user);
                     }

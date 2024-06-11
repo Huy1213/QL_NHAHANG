@@ -80,7 +80,6 @@ public class MS_CancelReserve extends javax.swing.JDialog {
         lbTitle = new javax.swing.JLabel();
         cmdOK = new NhaHang.View.Swing.ButtonOutLine();
         cmdCancel = new NhaHang.View.Swing.ButtonOutLine();
-        lbIcon = new javax.swing.JLabel();
         lbMessage = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -118,8 +117,6 @@ public class MS_CancelReserve extends javax.swing.JDialog {
             }
         });
 
-        lbIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/cancellation.png"))); // NOI18N
-
         lbMessage.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         lbMessage.setForeground(new java.awt.Color(108, 91, 123));
         lbMessage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -129,31 +126,24 @@ public class MS_CancelReserve extends javax.swing.JDialog {
         panelRound1.setLayout(panelRound1Layout);
         panelRound1Layout.setHorizontalGroup(
             panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRound1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(lbIcon)
-                .addGap(216, 216, 216))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRound1Layout.createSequentialGroup()
+            .addGroup(panelRound1Layout.createSequentialGroup()
+                .addGap(31, 31, 31)
                 .addGroup(panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(panelRound1Layout.createSequentialGroup()
-                        .addContainerGap(102, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(cmdOK, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(80, 80, 80)
                         .addComponent(cmdCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(77, 77, 77))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelRound1Layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addGroup(panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lbMessage, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lbTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addGap(30, 30, 30))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(lbMessage, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lbTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGap(29, 29, 29))
         );
         panelRound1Layout.setVerticalGroup(
             panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelRound1Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(lbIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(60, 60, 60)
                 .addComponent(lbTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(lbMessage)
@@ -161,7 +151,7 @@ public class MS_CancelReserve extends javax.swing.JDialog {
                 .addGroup(panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cmdOK, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cmdCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30))
+                .addContainerGap(72, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -212,7 +202,6 @@ public class MS_CancelReserve extends javax.swing.JDialog {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private NhaHang.View.Swing.ButtonOutLine cmdCancel;
     private NhaHang.View.Swing.ButtonOutLine cmdOK;
-    private javax.swing.JLabel lbIcon;
     private javax.swing.JLabel lbMessage;
     private javax.swing.JLabel lbTitle;
     private NhaHang.View.Swing.PanelRound panelRound1;

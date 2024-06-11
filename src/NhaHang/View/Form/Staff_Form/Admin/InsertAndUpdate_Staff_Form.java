@@ -49,7 +49,7 @@ public class InsertAndUpdate_Staff_Form extends javax.swing.JPanel {
         simpleDateFormat = new SimpleDateFormat("dd-MM-YYYY");
         if (data == null) {
             insert = true;
-            lbTitle.setText("Thêm NHÂN VIÊN"); 
+            lbTitle.setText("THÊM NHÂN VIÊN"); 
             data = new ModelNhanVien();
             initID();
             txtNVL.setDate(new Date());
@@ -111,6 +111,9 @@ public class InsertAndUpdate_Staff_Form extends javax.swing.JPanel {
         bg = new NhaHang.View.Swing.PanelRound();
         pic = new NhaHang.View.Swing.ImageAvatar();
         lbmaNV = new javax.swing.JLabel();
+        txtmaNV = new NhaHang.View.Swing.MyTextField();
+        txttSDT = new NhaHang.View.Swing.MyTextField();
+        lbsdt = new javax.swing.JLabel();
         lbTitle = new javax.swing.JLabel();
         lbtenNV = new javax.swing.JLabel();
         txttenNV = new NhaHang.View.Swing.MyTextField();
@@ -118,13 +121,10 @@ public class InsertAndUpdate_Staff_Form extends javax.swing.JPanel {
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
         lbcvu = new javax.swing.JLabel();
-        txtmaNV = new NhaHang.View.Swing.MyTextField();
         cbboxCvu = new javax.swing.JComboBox<>();
         cmdOK = new NhaHang.View.Swing.ButtonOutLine();
         cmdCancel = new NhaHang.View.Swing.ButtonOutLine();
         txtNVL = new com.toedter.calendar.JDateChooser();
-        lbsdt = new javax.swing.JLabel();
-        txttSDT = new NhaHang.View.Swing.MyTextField();
         lbmaNQL = new javax.swing.JLabel();
         txtmaNQL = new NhaHang.View.Swing.MyTextField();
         cmdKick = new NhaHang.View.Swing.Button();
@@ -133,31 +133,53 @@ public class InsertAndUpdate_Staff_Form extends javax.swing.JPanel {
 
         bg.setBackground(new java.awt.Color(255, 255, 255));
 
-        pic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/avata_ne.jpg"))); // NOI18N
-
         lbmaNV.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        lbmaNV.setForeground(new java.awt.Color(89, 89, 89));
         lbmaNV.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lbmaNV.setText("Mã Nhân Viên");
+        pic.add(lbmaNV);
+        lbmaNV.setBounds(0, 20, 137, 38);
+
+        txtmaNV.setEditable(false);
+        txtmaNV.setBackground(new java.awt.Color(204, 204, 204));
+        txtmaNV.setForeground(new java.awt.Color(93, 98, 101));
+        txtmaNV.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtmaNV.setFont(new java.awt.Font("sansserif", 0, 16)); // NOI18N
+        pic.add(txtmaNV);
+        txtmaNV.setBounds(150, 20, 201, 40);
+
+        txttSDT.setBackground(new java.awt.Color(204, 204, 204));
+        txttSDT.setForeground(new java.awt.Color(93, 98, 101));
+        txttSDT.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txttSDT.setFont(new java.awt.Font("sansserif", 0, 16)); // NOI18N
+        txttSDT.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txttSDTKeyTyped(evt);
+            }
+        });
+        pic.add(txttSDT);
+        txttSDT.setBounds(150, 80, 190, 40);
+
+        lbsdt.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        lbsdt.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lbsdt.setText("Số Điện Thoại");
+        pic.add(lbsdt);
+        lbsdt.setBounds(30, 80, 110, 38);
 
         lbTitle.setBackground(new java.awt.Color(255, 255, 255));
         lbTitle.setFont(new java.awt.Font("Segoe UI", 0, 22)); // NOI18N
-        lbTitle.setForeground(new java.awt.Color(108, 91, 123));
-        lbTitle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/hired.png"))); // NOI18N
-        lbTitle.setText("Thêm NHÂN VIÊN");
+        lbTitle.setText("THÊM NHÂN VIÊN");
         lbTitle.setIconTextGap(10);
 
         lbtenNV.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        lbtenNV.setForeground(new java.awt.Color(89, 89, 89));
         lbtenNV.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lbtenNV.setText("Tên Nhân Viên");
 
+        txttenNV.setBackground(new java.awt.Color(204, 204, 204));
         txttenNV.setForeground(new java.awt.Color(93, 98, 101));
         txttenNV.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txttenNV.setFont(new java.awt.Font("sansserif", 0, 16)); // NOI18N
 
         lbNVL.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        lbNVL.setForeground(new java.awt.Color(89, 89, 89));
         lbNVL.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lbNVL.setText("Ngày Vào Làm");
 
@@ -166,17 +188,10 @@ public class InsertAndUpdate_Staff_Form extends javax.swing.JPanel {
         jSeparator2.setBackground(new java.awt.Color(76, 76, 76));
 
         lbcvu.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        lbcvu.setForeground(new java.awt.Color(89, 89, 89));
         lbcvu.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lbcvu.setText("Chức Vụ");
 
-        txtmaNV.setEditable(false);
-        txtmaNV.setBackground(new java.awt.Color(175, 185, 203));
-        txtmaNV.setForeground(new java.awt.Color(93, 98, 101));
-        txtmaNV.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txtmaNV.setFont(new java.awt.Font("sansserif", 0, 16)); // NOI18N
-
-        cbboxCvu.setBackground(new java.awt.Color(215, 221, 232));
+        cbboxCvu.setBackground(new java.awt.Color(204, 204, 204));
         cbboxCvu.setFont(new java.awt.Font("SansSerif", 0, 16)); // NOI18N
         cbboxCvu.setForeground(new java.awt.Color(83, 105, 118));
         cbboxCvu.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Phuc vu", "Tiep tan", "Thu ngan", "Bep", "Kho", "Quan ly" }));
@@ -212,34 +227,18 @@ public class InsertAndUpdate_Staff_Form extends javax.swing.JPanel {
         txtNVL.setFocusable(false);
         txtNVL.setFont(new java.awt.Font("SansSerif", 0, 16)); // NOI18N
 
-        lbsdt.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        lbsdt.setForeground(new java.awt.Color(89, 89, 89));
-        lbsdt.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lbsdt.setText("Số Điện Thoại");
-
-        txttSDT.setForeground(new java.awt.Color(93, 98, 101));
-        txttSDT.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txttSDT.setFont(new java.awt.Font("sansserif", 0, 16)); // NOI18N
-        txttSDT.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                txttSDTKeyTyped(evt);
-            }
-        });
-
         lbmaNQL.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        lbmaNQL.setForeground(new java.awt.Color(89, 89, 89));
         lbmaNQL.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lbmaNQL.setText("Mã NQL");
 
         txtmaNQL.setEditable(false);
-        txtmaNQL.setBackground(new java.awt.Color(175, 185, 203));
+        txtmaNQL.setBackground(new java.awt.Color(204, 204, 204));
         txtmaNQL.setForeground(new java.awt.Color(93, 98, 101));
         txtmaNQL.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtmaNQL.setFont(new java.awt.Font("sansserif", 0, 16)); // NOI18N
 
         cmdKick.setBackground(new java.awt.Color(108, 91, 123));
         cmdKick.setForeground(new java.awt.Color(255, 255, 255));
-        cmdKick.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/job.png"))); // NOI18N
         cmdKick.setText("SA THẢI");
         cmdKick.setFocusable(false);
         cmdKick.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
@@ -260,42 +259,26 @@ public class InsertAndUpdate_Staff_Form extends javax.swing.JPanel {
                     .addComponent(jSeparator1)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bgLayout.createSequentialGroup()
                         .addComponent(pic, javax.swing.GroupLayout.PREFERRED_SIZE, 335, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(45, 45, 45)
+                        .addGap(43, 43, 43)
                         .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(bgLayout.createSequentialGroup()
-                                .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lbtenNV, javax.swing.GroupLayout.DEFAULT_SIZE, 137, Short.MAX_VALUE)
-                                    .addComponent(lbmaNV, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(30, 30, 30)
-                                .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtmaNV, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(txtNVL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(txttenNV, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGroup(bgLayout.createSequentialGroup()
-                                .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bgLayout.createSequentialGroup()
-                                        .addComponent(lbsdt, javax.swing.GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE)
-                                        .addGap(30, 30, 30)
-                                        .addComponent(txttSDT, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(bgLayout.createSequentialGroup()
-                                        .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(lbNVL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(lbcvu, javax.swing.GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE))
-                                        .addGap(30, 30, 30)
-                                        .addComponent(cbboxCvu, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                                .addGap(1, 1, 1))
-                            .addGroup(bgLayout.createSequentialGroup()
-                                .addComponent(lbmaNQL, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(29, 29, 29)
-                                .addComponent(txtmaNQL, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addComponent(lbtenNV, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbNVL, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbcvu, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbmaNQL, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtmaNQL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(txtNVL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(txttenNV, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                            .addComponent(cbboxCvu, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(0, 95, Short.MAX_VALUE)))
                 .addGap(80, 80, 80))
             .addGroup(bgLayout.createSequentialGroup()
-                .addGap(231, 231, 231)
-                .addComponent(cmdOK, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(148, 148, 148)
+                .addGap(168, 168, 168)
                 .addComponent(cmdCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(cmdOK, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(187, 187, 187))
         );
         bgLayout.setVerticalGroup(
             bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -312,30 +295,22 @@ public class InsertAndUpdate_Staff_Form extends javax.swing.JPanel {
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(bgLayout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lbmaNV, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtmaNV, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(20, 20, 20)
+                        .addGap(37, 37, 37)
                         .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lbtenNV, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txttenNV, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(20, 20, 20)
-                        .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(lbNVL, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
-                            .addComponent(txtNVL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(20, 20, 20)
-                        .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lbsdt, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txttSDT, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(20, 20, 20)
+                        .addGap(27, 27, 27)
                         .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtNVL, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbNVL, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lbcvu, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(cbboxCvu, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(20, 20, 20)
+                        .addGap(26, 26, 26)
                         .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lbmaNQL, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtmaNQL, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(txtmaNQL, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbmaNQL, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(bgLayout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addComponent(pic, javax.swing.GroupLayout.PREFERRED_SIZE, 366, javax.swing.GroupLayout.PREFERRED_SIZE)))

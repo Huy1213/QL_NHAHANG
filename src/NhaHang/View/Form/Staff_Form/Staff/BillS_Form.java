@@ -117,8 +117,6 @@ public class BillS_Form extends javax.swing.JPanel {
 
         lbTitle.setBackground(new java.awt.Color(255, 255, 255));
         lbTitle.setFont(new java.awt.Font("Segoe UI", 0, 22)); // NOI18N
-        lbTitle.setForeground(new java.awt.Color(108, 91, 123));
-        lbTitle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/search.png"))); // NOI18N
         lbTitle.setText("Thông tin Hóa Đơn");
         lbTitle.setIconTextGap(10);
 
@@ -151,19 +149,19 @@ public class BillS_Form extends javax.swing.JPanel {
         lbNgHD.setText("Ngày ");
 
         txtidHD.setEditable(false);
+        txtidHD.setBackground(new java.awt.Color(204, 204, 204));
+        txtidHD.setForeground(new java.awt.Color(0, 0, 0));
         txtidHD.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtidHD.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
 
         lbidHD.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        lbidHD.setForeground(new java.awt.Color(89, 89, 89));
         lbidHD.setText("Mã Hóa Đơn");
 
         jSeparator3.setBackground(new java.awt.Color(76, 76, 76));
         jSeparator3.setOrientation(javax.swing.SwingConstants.VERTICAL);
 
-        cmdExportBill.setBackground(new java.awt.Color(108, 91, 123));
+        cmdExportBill.setBackground(new java.awt.Color(255, 102, 0));
         cmdExportBill.setForeground(new java.awt.Color(255, 255, 255));
-        cmdExportBill.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/receipt.png"))); // NOI18N
         cmdExportBill.setText("XUẤT HÓA ĐƠN");
         cmdExportBill.setFocusable(false);
         cmdExportBill.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -197,20 +195,21 @@ public class BillS_Form extends javax.swing.JPanel {
         }
 
         lbTongtien.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        lbTongtien.setForeground(new java.awt.Color(89, 89, 89));
         lbTongtien.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lbTongtien.setText("Tổng tiền");
 
         txtTongtien.setEditable(false);
-        txtTongtien.setBackground(new java.awt.Color(175, 185, 203));
+        txtTongtien.setBackground(new java.awt.Color(204, 204, 204));
+        txtTongtien.setForeground(new java.awt.Color(0, 0, 0));
         txtTongtien.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtTongtien.setFont(new java.awt.Font("sansserif", 0, 16)); // NOI18N
 
         lbTienKH.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        lbTienKH.setForeground(new java.awt.Color(89, 89, 89));
         lbTienKH.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lbTienKH.setText("Tiền khách đưa ");
 
+        txtTienKH.setBackground(new java.awt.Color(204, 204, 204));
+        txtTienKH.setForeground(new java.awt.Color(0, 0, 0));
         txtTienKH.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtTienKH.setFont(new java.awt.Font("sansserif", 0, 16)); // NOI18N
         txtTienKH.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -230,20 +229,21 @@ public class BillS_Form extends javax.swing.JPanel {
         });
 
         lbTientra.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        lbTientra.setForeground(new java.awt.Color(89, 89, 89));
         lbTientra.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lbTientra.setText("Tiền trả lại");
 
         txtTientra.setEditable(false);
-        txtTientra.setBackground(new java.awt.Color(175, 185, 203));
+        txtTientra.setBackground(new java.awt.Color(204, 204, 204));
+        txtTientra.setForeground(new java.awt.Color(0, 0, 0));
         txtTientra.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtTientra.setFont(new java.awt.Font("sansserif", 0, 16)); // NOI18N
 
         lbidKH.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        lbidKH.setForeground(new java.awt.Color(89, 89, 89));
         lbidKH.setText("Mã Khách Hàng");
 
         txtidKH.setEditable(false);
+        txtidKH.setBackground(new java.awt.Color(204, 204, 204));
+        txtidKH.setForeground(new java.awt.Color(0, 0, 0));
         txtidKH.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtidKH.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
 

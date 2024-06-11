@@ -41,7 +41,7 @@ public class TableMenu_Form extends javax.swing.JPanel {
     public void init(){
         try {
             customer=service.getCustomer(user.getUserID());
-            panel.setLayout(new WrapLayout(WrapLayout.LEADING,20,20));
+            panel.setLayout(new WrapLayout(WrapLayout.LEADING,27,20));
             txtSearch.setHint("Tìm kiếm bàn . . .");
             jScrollPane1.setVerticalScrollBar(new ScrollBarCustom());
             //Thêm data cho Menu
@@ -49,16 +49,8 @@ public class TableMenu_Form extends javax.swing.JPanel {
             
             switch (floor) {
                 case "Tang 1" -> {
-                    lbTitle.setText("Đặt bàn/Tầng 1");
+                    lbTitle.setText("Đặt bàn/Sảnh");
                     lbTitle.setIcon(new ImageIcon(getClass().getResource("/Icons/one.png")));
-                }
-                case "Tang 2" -> {
-                    lbTitle.setText("Đặt bàn/Tầng 2");
-                    lbTitle.setIcon(new ImageIcon(getClass().getResource("/Icons/two.png")));
-                }
-                case "Tang 3" -> {
-                    lbTitle.setText("Đặt bàn/Tầng 3");
-                    lbTitle.setIcon(new ImageIcon(getClass().getResource("/Icons/three.png")));
                 }
                 default -> {
                 }
