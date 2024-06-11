@@ -42,9 +42,6 @@ public class MenuStaff extends javax.swing.JPanel {
     //Khởi tạo data cho Menu 
     public void initMenuItem() {
         addMenu(new ModelMenu(new ImageIcon(getClass().getResource("/Icons/MenuBar/nglieu.png")), "Quản lý Nguyên Liệu"));
-        addMenu(new ModelMenu(new ImageIcon(getClass().getResource("/Icons/MenuBar/kho.png")), "Thông tin Kho"));
-        addMenu(new ModelMenu(new ImageIcon(getClass().getResource("/Icons/MenuBar/import.png")), "Quản lý Nhập Kho"));
-        addMenu(new ModelMenu(new ImageIcon(getClass().getResource("/Icons/MenuBar/export.png")), "Quản lý Xuất Kho"));  
         addMenu(new ModelMenu(new ImageIcon(getClass().getResource("/Icons/MenuBar/user.png")), "Tài Khoản"));
         addMenu(new ModelMenu(new ImageIcon(getClass().getResource("/Icons/MenuBar/logout.png")), "Đăng Xuất"));
     }

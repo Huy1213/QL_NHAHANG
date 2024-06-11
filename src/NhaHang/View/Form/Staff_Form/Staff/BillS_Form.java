@@ -390,9 +390,9 @@ public class BillS_Form extends javax.swing.JPanel {
         PDPage newpage = new PDPage();
         //Thêm trang trống
         invc.addPage(newpage);
-        String title = "Nhà hàng Sài Gòn kính chào quý khách";
+        String title = "SAI GON RESTAURENT";
         String subtitle = "HOA DON THANH TOAN";
-        String footer="Cảm ơn bạn đã đặt món";
+        String footer="CAM ON QUY KHACH";
         String tenKH = "";
         try {
             tenKH = serviceS.getTenKH(bill.getIdKH());
@@ -400,14 +400,14 @@ public class BillS_Form extends javax.swing.JPanel {
             Logger.getLogger(BillS_Form.class.getName()).log(Level.SEVERE, null, ex);
         }
         DefaultTableModel model = (DefaultTableModel) tableCTHD.getModel();
-        PDFont font = PDType1Font.TIMES_ROMAN;
+        PDFont font = PDType1Font.HELVETICA;
         //Thêm dữ liệu vào file pdf
         PDPage mypage = invc.getPage(0);
         try {
             PDPageContentStream cs = new PDPageContentStream(invc, mypage);
             //Viết tiêu đề Hóa đơn
             cs.beginText();
-            cs.setFont(PDType1Font.TIMES_BOLD, 22);
+            cs.setFont(PDType1Font.HELVETICA, 22);
             cs.newLineAtOffset(165, 750);
             cs.showText(title);
             cs.endText();
@@ -479,17 +479,16 @@ public class BillS_Form extends javax.swing.JPanel {
             cs.setFont(font, 14);
             cs.setLeading(20f);
             cs.newLineAtOffset(280, 480 - (model.getRowCount() * 20));
-            cs.showText("Tien mon an: ");
-            cs.newLine();
-            cs.showText("Tien giam gia: ");
-            cs.newLine();
             cs.showText("Tong tien: ");
             cs.newLine();
-            cs.showText("Tien khach dua: ");
             cs.newLine();
-            cs.showText("Tien tra lai: ");
+            
+            cs.newLine();
+           
+            cs.newLine();
+           
             cs.endText();
-
+            
             cs.beginText();
             cs.setFont(font, 14);
             cs.setLeading(20f);
@@ -498,7 +497,7 @@ public class BillS_Form extends javax.swing.JPanel {
             cs.endText();
             //Cuối Hóa đơn
             cs.beginText();
-            cs.setFont(PDType1Font.TIMES_BOLD, 20);
+            cs.setFont(PDType1Font.HELVETICA_BOLD, 20);
             cs.newLineAtOffset(150, 350 - (model.getRowCount() * 20));
             cs.showText(footer);
             cs.endText();

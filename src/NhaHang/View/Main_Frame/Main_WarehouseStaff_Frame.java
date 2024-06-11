@@ -50,19 +50,11 @@ public class Main_WarehouseStaff_Frame extends javax.swing.JFrame {
                     case 0 -> {
                         main.showForm(new Ingredient_Form(main));
                     }
+                    
                     case 1 -> {
-                        main.showForm(new Warehouse_Form(main));
-                    }
-                    case 2 -> {
-                        main.showForm(new Import_Form(user,main));
-                    }
-                    case 3 -> {
-                        main.showForm(new Export_Form(user,main));
-                    }
-                    case 4 -> {
                         main.showForm(new AccountS_Form(user));
                     }
-                    case 5 -> {
+                    case 2 -> {
                         dispose();
                         Main_LoginAndRegister.main();
                     }

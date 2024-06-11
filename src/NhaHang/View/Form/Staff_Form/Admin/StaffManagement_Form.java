@@ -71,7 +71,7 @@ public class StaffManagement_Form extends javax.swing.JPanel {
     }
 
     public void getNumberofS() {
-        txtTong.setText(list.size() + " HR");
+        txtTong.setText(list.size() + " NV");
     }
 
     public void initTable() {

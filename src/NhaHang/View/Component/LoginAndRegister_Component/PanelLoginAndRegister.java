@@ -161,13 +161,7 @@ public class PanelLoginAndRegister extends javax.swing.JLayeredPane {
             }
 
         });
-        //Button "Quên mật khẩu"
-        JButton cmdForget = new JButton("Quên mật khẩu của bạn ?");
-        cmdForget.setForeground(new Color(100, 100, 100));
-        cmdForget.setFont(new Font("sansserif", 1, 12));
-        cmdForget.setContentAreaFilled(false);
-        cmdForget.setCursor(new Cursor(Cursor.HAND_CURSOR));
-        login.add(cmdForget);
+       
         //Button "ĐĂNG NHẬP"
         Button cmd = new Button();
         cmd.setBackground(Color.decode("#FF4500"));

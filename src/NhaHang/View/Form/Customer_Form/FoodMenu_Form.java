@@ -62,52 +62,52 @@ public class FoodMenu_Form extends javax.swing.JPanel {
             //Set Data cho Tiêu đề Menu
             switch (type) {
                 case "Cuu" -> {
-                    lbTitle.setText("Menu/" + type + " - Cừu");
-                    lbTitle.setIcon(new ImageIcon(getClass().getResource("/Icons/MenuBar/aries.png")));
+                    lbTitle.setText("Menu - Cừu");
+                    
                 }
                 case "Bo" -> {
-                    lbTitle.setText("Menu/" + type + " - Bò");
-                    lbTitle.setIcon(new ImageIcon(getClass().getResource("/Icons/MenuBar/taurus.png")));
+                    lbTitle.setText("Menu - Bò");
+                  
                 }
                 case "Combo" -> {
-                    lbTitle.setText("Menu/" + type + " - Combo");
-                    lbTitle.setIcon(new ImageIcon(getClass().getResource("/Icons/MenuBar/gemini.png")));
+                    lbTitle.setText("Menu - Combo");
+                   
                 }
                 case "Cua" -> {
-                    lbTitle.setText("Menu/" + type + " - Cua");
-                    lbTitle.setIcon(new ImageIcon(getClass().getResource("/Icons/MenuBar/cancer.png")));
+                    lbTitle.setText("Menu - Cua");
+                 
                 }
                 case "MonHan" -> {
-                    lbTitle.setText("Menu/" + type + " - Món hàn");
-                    lbTitle.setIcon(new ImageIcon(getClass().getResource("/Icons/MenuBar/leo.png")));
+                    lbTitle.setText("Menu - Món hàn");
+            
                 }
                 case "BanhNgot" -> {
-                    lbTitle.setText("Menu/" + type + " - Bánh ngọt");
-                    lbTitle.setIcon(new ImageIcon(getClass().getResource("/Icons/MenuBar/virgo.png")));
+                    lbTitle.setText("Menu - Bánh ngọt");
+                 
                 }
                 case "Salad" -> {
-                    lbTitle.setText("Menu/" + type + " - Salad");
-                    lbTitle.setIcon(new ImageIcon(getClass().getResource("/Icons/MenuBar/libra.png")));
+                    lbTitle.setText("Menu - Salad");
+                 
                 }
                 case "Scorpio" -> {
-                    lbTitle.setText("Menu/" + type + " - Lunchbox");
-                    lbTitle.setIcon(new ImageIcon(getClass().getResource("/Icons/MenuBar/scorpio.png")));
+                    lbTitle.setText("Menu - Lunchbox");
+                
                 }
                 case "Ngua" -> {
-                    lbTitle.setText("Menu/" + type + " - Ngựa");
-                    lbTitle.setIcon(new ImageIcon(getClass().getResource("/Icons/MenuBar/sagittarius.png")));
+                    lbTitle.setText("Menu - Ngựa");
+                   
                 }
                 case "De" -> {
-                    lbTitle.setText("Menu/" + type + " - Dê");
-                    lbTitle.setIcon(new ImageIcon(getClass().getResource("/Icons/MenuBar/capricorn.png")));
+                    lbTitle.setText("Menu - Dê");
+                
                 }
                 case "DoUong" -> {
-                    lbTitle.setText("Menu/" + type + " - Đồ uống");
-                    lbTitle.setIcon(new ImageIcon(getClass().getResource("/Icons/MenuBar/aquarius.png")));
+                    lbTitle.setText("Menu - Đồ uống");
+                
                 }
                 case "Ca" -> {
-                    lbTitle.setText("Menu/" + type + " - Cá");
-                    lbTitle.setIcon(new ImageIcon(getClass().getResource("/Icons/MenuBar/pisces.png")));
+                    lbTitle.setText("Menu - Cá");
+              
                 }
                 default -> {
                 }
@@ -186,14 +186,13 @@ public class FoodMenu_Form extends javax.swing.JPanel {
         );
         panelLayout.setVerticalGroup(
             panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 542, Short.MAX_VALUE)
+            .addGap(0, 546, Short.MAX_VALUE)
         );
 
         jScrollPane1.setViewportView(panel);
 
         lbTitle.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         lbTitle.setForeground(new java.awt.Color(108, 91, 123));
-        lbTitle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/MenuBar/aries.png"))); // NOI18N
         lbTitle.setText("Menu/Arias - Cừu");
         lbTitle.setIconTextGap(10);
         lbTitle.setInheritsPopupMenu(false);

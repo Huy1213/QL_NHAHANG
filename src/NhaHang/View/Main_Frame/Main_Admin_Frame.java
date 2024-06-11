@@ -7,7 +7,6 @@ import NhaHang.View.Component.Admin_Component.MenuA;
 import NhaHang.View.Form.MainForm;
 import NhaHang.View.Form.Staff_Form.AccountS_Form;
 import NhaHang.View.Form.Staff_Form.Admin.BillStatistic_Form;
-import NhaHang.View.Form.Staff_Form.Admin.ImportStatistic_Form;
 import NhaHang.View.Form.Staff_Form.Admin.MenuManagement_Form;
 import NhaHang.View.Form.Staff_Form.Admin.RevenueReport_Form;
 import NhaHang.View.Form.Staff_Form.Admin.StaffManagement_Form;
@@ -61,17 +60,14 @@ public class Main_Admin_Frame extends javax.swing.JFrame {
                     }
                     case 3 -> {
                         main.showForm(new BillStatistic_Form(main));
-                    }
+                    }               
                     case 4 -> {
-                        main.showForm(new ImportStatistic_Form(main));
-                    }
-                    case 5 -> {
                         main.showForm(new CusInformation_Form(main));
                     }
-                    case 6 -> {
+                    case 5 -> {
                         main.showForm(new AccountS_Form(user));
                     }
-                    case 7 -> {
+                    case 6 -> {
                         dispose();
                         Main_LoginAndRegister.main();
                     }
